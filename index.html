@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>IP Address Finder</h1>
+            <p class="subtitle">Discover your IP address and location information</p>
+
+            <div class="content">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Finding your IP address...</p>
+                </div>
+
+                <div class="info-section" id="infoSection" style="display: none;">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <label>IP Address</label>
+                            <div class="info-value" id="ipAddress">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>Country</label>
+                            <div class="info-value" id="country">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>Region</label>
+                            <div class="info-value" id="region">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>City</label>
+                            <div class="info-value" id="city">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>Timezone</label>
+                            <div class="info-value" id="timezone">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>ISP</label>
+                            <div class="info-value" id="isp">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>Latitude</label>
+                            <div class="info-value" id="latitude">-</div>
+                        </div>
+
+                        <div class="info-card">
+                            <label>Longitude</label>
+                            <div class="info-value" id="longitude">-</div>
+                        </div>
+                    </div>
+
+                    <button class="refresh-btn" onclick="fetchIPInfo()">Refresh</button>
+                </div>
+
+                <div class="error" id="error" style="display: none;">
+                    <p>Unable to fetch IP information. Please try again.</p>
+                    <button class="retry-btn" onclick="fetchIPInfo()">Retry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
